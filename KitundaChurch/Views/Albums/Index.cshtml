@@ -1,0 +1,123 @@
+﻿@addTagHelper *, KitundaChurch
+@model IEnumerable<KitundaChurch.Models.Album>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container" style=" background-image:url('../../images/cover.jpg'); ">
+ 
+    <div class="btn-outline-success ">
+        <div class="btn btn-default btn-success alb col-md-6">Albums</div>
+        <div class=" btn btn-default btn-success son col-md-6">All songs</div>
+    </div>
+   
+    <div id="table1"   style="overflow-y:scroll; ">
+        
+        <table class="col-md-5 ">
+
+@foreach (var item in Model)
+{
+                    <tr class="Albm" id="@item.AlbumId">
+                        <td>
+            <div class="table3" style="display:none;">
+     <vc:song-list album-id="@item.AlbumId">
+                                             </vc:song-list>
+</div>
+                        </td>
+
+                        <td class="hid">
+
+                            @{foreach (var sing in ViewBag.song)
+                                {
+                                    if (sing.AlbumId == item.AlbumId)
+                                    {
+                                        var base64 = Convert.ToBase64String(sing.songData);
+                                        var imgSrc = String.Format("data:image/jpg;base64,{0}", base64);
+                                        ViewBag.img = imgSrc;
+                                    }
+                                }
+                            }
+                          
+                            
+                                <img src='@ViewBag.img' style="max-width:100px; max-height:100px;" />
+                     
+                            
+</td>
+
+                        <td class="hid">
+
+                           
+
+                                @Html.DisplayFor(modelItem => item.Title)
+                            
+</td>
+
+                </tr>
+                                    
+                }            
+
+        </table>
+        </div>
+      
+                                
+   <div id="table2" style="overflow-y:scroll; display:none; Height:300px;">
+        <table  style=" overflow:auto; Height:300px;" class="table-hover  col-md-5">
+
+
+            @foreach (var item2 in ViewBag.song)
+            {
+                <tr>
+                    <td>
+
+
+                        @{
+                            var base64 = Convert.ToBase64String(item2.songData);
+                            var imgSrc = String.Format("data:image/jpg;base64,{0}", base64);
+                            ViewBag.img = imgSrc;
+
+                        }
+
+                        <img src='@ViewBag.img' style="max-width:100px; max-height:100px;" />
+                    </td>
+
+                    <td>
+                        <p>@item2.songName)</p>
+                    </td>
+                </tr>
+                            }
+
+        </table></div>
+       
+      
+       
+        <div>
+            <audio id="mejs" class="bottom" style="width:100%; padding:30px;" src="../media/audio-01.mp3" type="audio/mp3" controls="controls"></audio>
+        </div>
+    </div>
+@section scripts{
+
+<script>
+    $(".Albm").click(function(){
+
+   
+        $(".hid").hide();
+        
+        $(this).find(".table3").show();
+       
+
+    });
+
+    $(".son").click(function(){
+        $("#table2").show();
+        $(".hid").hide();
+        $(".table3").hide();
+
+    });
+    $(".alb").click(function () {
+        $("#table2").hide();
+        $(".table3").hide();
+        $(".hid").show();
+    });
+</script>
+}
