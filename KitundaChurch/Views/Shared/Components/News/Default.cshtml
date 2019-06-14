@@ -3,9 +3,10 @@
     .soon {
         overflow: hidden !important;
         color: inherit !important;
+        
     }
 
-        .soon img {
+        /*.soon img {
             width: 200px !important;
             height: auto !important;
             border: 8px ridge darkgray !important;
@@ -15,7 +16,8 @@
             -ms-transition: all 1s ease !important; /* IE 9 */
             -o-transition: all 1s ease !important; /* Opera */
             transition: all 1s ease !important;
-        }
+           margin:25px;
+        }*/
 
             .soon img:hover {
                 -webkit-transform: scale(1.25) !important; /* Safari and Chrome */
@@ -24,6 +26,7 @@
                 -o-transform: scale(1.25) !important; /* Opera */
                 transform: scale(1.25) !important;
             }
+           
 </style>
 
 
@@ -35,7 +38,7 @@
 
 @foreach (var item in Model)
 {
-    <div>
+    <div class="col-md-4">
         @*<div class="col-md-2 boxed">
 
                     @if (ViewBag.image != null)
@@ -46,11 +49,11 @@
                     <span id="soon">Next Coming Soon</span>
 
             </div>*@
-        <a href=" @Url.Action("Details","News",  new { id = item.Id })" class="col-md-12 soon ">
+        <a href=" @Url.Action("Details","News",  new { id = item.Id })" class=" soon ">
 
-             <h5 class="TheTitle" style="color:rgba(23, 124, 224, 0.97); margin:0; padding:0;">  @Html.DisplayFor(modelItem => item.Title)</h5>
-            @Html.Raw(item.content)
-            <hr />
+             <h5 class="TheTitle" style="color:rgba(23, 124, 224, 0.97); margin:0; padding:0;">  @*@Html.DisplayFor(modelItem => item.Title)*@</h5>
+           <div class="co"> @Html.Raw(item.content)</div>
+            
 
 
             <p>
@@ -61,7 +64,7 @@
         </a>
     </div>
         
-        <hr>
+        
 
 }
 

@@ -1,0 +1,42 @@
+﻿@model KitundaChurch.Models.Song
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Song</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.songName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.songName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.songData)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.songData)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContentType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContentType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Album)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Album.AlbumId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.songId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

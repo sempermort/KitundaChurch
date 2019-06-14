@@ -1,0 +1,77 @@
+﻿@addTagHelper*, KitundaChurch
+@model IEnumerable<KitundaChurch.Models.Gallery>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="container">
+    <div class="row">
+        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1 class="gallery-title">Gallery</h1>
+        </div>
+        <div align="center">
+            <button class="btn btn-default filter-button active" onclick="clickFunc(0)" data-filter="all">All</button>
+@foreach (var item in Model)
+{
+    <button class="btn btn-default filter-button" onclick="clickFunc(@item.GalleryId)" >@item.Category</button>
+
+}
+</div></div>
+        <div class="Events img-thumbnail  a " style="position:relative; padding:15px;  display: flex; flex-flow: row wrap;">
+          
+        </div>
+              @*<a asp-action="Edit" asp-route-id="@Model.GalleryId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.GalleryId">Details</a> |*@
+       
+    </div>
+
+    
+@section scripts
+    {
+
+<script>
+ 
+
+    function clickFunc(Id) {
+        var container = $(".a");
+        container.empty();
+        var GalleryId = Id;
+        $.ajax({
+            url: "@Url.Action("IntermediateAsync","Galleries")",
+            type: "Post",
+            data:{
+                GalleryId
+            },
+            success: function (response) {
+
+                
+
+                $.each(response, function (i, b) {
+                    var item = '<div class=" img-thumbnail col-lg-4 col-md-4 col-sm-4 col-xs-6 " style=" padding-bottom:20px;">' +
+                        '<img src="data:image/png;base64,' +  b.content  +'" class="img-responsive"/></div>';
+                        container.append(item);
+                       
+                });
+                  },
+             
+
+            failure: function (response) {
+                alert(response);
+            }
+
+        });
+    }
+           
+    
+        
+</script>
+
+
+        }
+    
+
+   
+        

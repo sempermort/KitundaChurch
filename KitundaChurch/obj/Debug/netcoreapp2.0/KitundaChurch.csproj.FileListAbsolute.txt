@@ -20,3 +20,14 @@ C:\Users\Jackson\Desktop\repos\KitundaChurch\KitundaChurch\obj\Debug\netcoreapp2
 C:\Users\Jackson\Desktop\repos\KitundaChurch\KitundaChurch\obj\Debug\netcoreapp2.0\KitundaChurch.AssemblyInfo.cs
 C:\Users\Jackson\Desktop\repos\KitundaChurch\KitundaChurch\obj\Debug\netcoreapp2.0\KitundaChurch.dll
 C:\Users\Jackson\Desktop\repos\KitundaChurch\KitundaChurch\obj\Debug\netcoreapp2.0\KitundaChurch.pdb
+D:\repos\KitundaChurch\KitundaChurch\bin\Debug\netcoreapp2.0\KitundaChurch.deps.json
+D:\repos\KitundaChurch\KitundaChurch\bin\Debug\netcoreapp2.0\KitundaChurch.runtimeconfig.json
+D:\repos\KitundaChurch\KitundaChurch\bin\Debug\netcoreapp2.0\KitundaChurch.runtimeconfig.dev.json
+D:\repos\KitundaChurch\KitundaChurch\bin\Debug\netcoreapp2.0\KitundaChurch.dll
+D:\repos\KitundaChurch\KitundaChurch\bin\Debug\netcoreapp2.0\KitundaChurch.pdb
+D:\repos\KitundaChurch\KitundaChurch\obj\Debug\netcoreapp2.0\KitundaChurch.csproj.CoreCompileInputs.cache
+D:\repos\KitundaChurch\KitundaChurch\obj\Debug\netcoreapp2.0\KitundaChurch.AssemblyInfoInputs.cache
+D:\repos\KitundaChurch\KitundaChurch\obj\Debug\netcoreapp2.0\KitundaChurch.AssemblyInfo.cs
+D:\repos\KitundaChurch\KitundaChurch\obj\Debug\netcoreapp2.0\KitundaChurch.dll
+D:\repos\KitundaChurch\KitundaChurch\obj\Debug\netcoreapp2.0\KitundaChurch.pdb
+D:\repos\KitundaChurch\KitundaChurch\obj\Debug\netcoreapp2.0\KitundaChurch.csprojAssemblyReference.cache

@@ -1,0 +1,78 @@
+﻿@model KitundaChurch.Models.Matoleo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Matoleo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ChurchMembers.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ChurchMembers.Name)
+        </dd>
+    
+        <dt>
+            @Html.DisplayNameFor(model => model.Zaka)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Zaka)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sadakaConf)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sadakaConf)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sadakaBk)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sadakaBk)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sadakaMajengo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sadakaMajengo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sadakaMakambi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sadakaMakambi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MpangoKanisa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MpangoKanisa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Savetime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Savetime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+       
+    </dl>
+    
+    <form  method="post" asp-action="Delete">
+        <input type="hidden" asp-for="MatoleoId" />
+    
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

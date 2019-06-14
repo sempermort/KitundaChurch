@@ -1,0 +1,25 @@
+﻿@model IEnumerable<KitundaChurch.Models.Gallery>
+
+
+    @foreach (var item3 in Model)
+    {
+
+
+                @foreach (var item in item3.image)
+                {
+
+                    {
+                        var base64 = Convert.ToBase64String(item.content);
+                        var imgSrc = String.Format("data:image/jpg;base64,{0}", base64);
+                        ViewBag.img = imgSrc;
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter @item3.Category">
+                            <img src="@ViewBag.img" class="img-responsive">
+                        </div>
+
+                    }
+                }
+
+    }
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@

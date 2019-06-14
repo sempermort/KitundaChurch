@@ -1,18 +1,40 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-   
-    
-   
+    font-family:"Helvetica Neue", Helvetica,Arial, sans-serif;
+    line-height: 1.4285em;
+    background-color: #f9f9f9;
 }
-eve{
-    background-image: url('../images/dsc_0938.jpg');
-    background-position: center;
-    background-size: cover;
-    opacity:0.3;
-    background-color: rgba(255, 255, 255,0.3)
+.footer-bgcolor {
+    background-color: #333333;
+}
+
+.footer-space {
+    padding: 40px 0 40px 0;
+}
+
+.footer-icon li {
+    list-style: none;
+    display: inline-block;
+}
+
+.footer-br-bottom {
+    margin-bottom: 30px;
+}
+
+.footer-br {
+    border-bottom: 1px solid #555555;
+    margin-top: 30px;
+}
+.eve {
+   overflow:hidden;
+    
+    height:auto;
+   
     /* For IE8 and earlier */
 }
+
+
 .body-content {
     padding-left: 0px;
     padding-right: 0px;
@@ -37,10 +59,7 @@ content {
 
     /* Wrapping element */
     /* Set some basic padding to keep content from hitting the edges */
-    .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+  
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input,
@@ -268,7 +287,6 @@ div.made {
 .Events {
     
     padding-left: 0px;
-    padding-right: 0px;
 }
 
 .navbar-brand {
@@ -282,7 +300,7 @@ div.made {
     height: 45px;
     border-radius: 47px;
     box-shadow: 0 0 0 2px rgba(144, 147, 148, 0.09), 0 0 0 2px rgba(208, 212, 216, 0.3);
-    margin: 10px;
+    margin: 5px;
     position: relative;
     text-align: center;
     font-family: Arial;
@@ -301,6 +319,9 @@ div.made {
     bottom: 0;
     background-color: #337ab7;
     font-size: medium;
+}
+.soon{
+    padding-left:0;
 }
 
 .boxed {
@@ -440,13 +461,14 @@ div.made {
 /*          Hero Headers        */
 /********************************/
 .hero {
+    display:block;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     z-index: 3;
     color: #fff;
     text-align: center;
-    text-transform: uppercase;
+    
     text-shadow: 1px 1px 0 rgba(0,0,0,.75);
     -webkit-transform: translate3d(-50%,-50%,0);
     -moz-transform: translate3d(-50%,-50%,0);
@@ -462,6 +484,7 @@ div.made {
         padding: 0;
     }
 
+  
 .fade-carousel .carousel-inner .item .hero {
     opacity: 0;
     -webkit-transition: 2s all ease-in-out .1s;
@@ -483,7 +506,7 @@ div.made {
 /********************************/
 /*            Overlay           */
 /********************************/
-.overlay:hover {
+.lay:hover {
     display:block;
     position: absolute;
     width: 100%;
@@ -523,16 +546,17 @@ div.made {
 }
 
 .fade-carousel .slides .slide-1 {
-    
+
     background-image: url('../images/summer-192179_1280.jpg');
 }
 
 .fade-carousel .slides .slide-2 {
-    background-image: url('../images/dsc_0966.jpg');
+    background-image: url('~/images/dsc_0966.jpg');
+    
 }
 
 .fade-carousel .slides .slide-3 {
-    background-image: url('../images/dsc_0878.jpg');
+    background-image: url('~/images/dsc_0878.jpg');
 }
 
 /********************************/
@@ -547,9 +571,79 @@ div.made {
 @media screen and (max-width: 640px) {
     .hero h1 {
         font-size: 4em;
+
     }
-}
+    .r{
+        font-size:28px;
+    }
+    }
 footer{
     position:relative;
     width:100%;
+}
+.tracking-in-contract-bck-top {
+    -webkit-animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+.e {
+    padding: 15px;
+    bottom: 100px;
+    position: relative;
+    z-index: 1000;
+    background-color: rgba(245, 242, 242, 1);
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    padding:!important 0px;
+}
+.media-left {
+    position: relative;
+    padding: 0;
+}
+.headers {
+    margin: 15px;
+    padding: 0px 15px 15px 15px;
+    border-bottom: 5px solid #eceae4;
+}
+.btn-o{
+    border:1px solid #333333;
+    border-radius:5px;
+    padding:5px;
+    
+}
+    .btn-o > p {
+        margin: 0px;
+    }
+.our {
+    background-size: 100% auto;
+    background-image: url('../images/dsc_0938.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    height: 450px;
+    width: 100%;
+    border-bottom: 100px solid #f39c12;
+    font-size: x-large;
+    color:white;
+}
+.b {
+    overflow:hidden;
+    margin-top: -140px;
+    margin-left: 0;
+    padding: 0;
+    height:450px;
+}
+.co > p > img {
+    width: 100% !important;
+    height: 50% !important;
+    padding-bottom: 20px
+}
+.co {
+    background-color: white;
+    margin:0;
+    padding:0 0 50px 0;
+    height:auto;
+    font-size-adjust:0.7;
+  
+    
 }

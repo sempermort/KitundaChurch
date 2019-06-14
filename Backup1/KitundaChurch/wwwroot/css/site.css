@@ -1,0 +1,561 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+   
+    
+   
+}
+eve{
+    background-image: url('../images/dsc_0938.jpg');
+    background-position: center;
+    background-size: cover;
+    opacity:0.3;
+    background-color: rgba(255, 255, 255,0.3)
+    /* For IE8 and earlier */
+}
+.body-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+    width: 100%;
+    /*background-color: rgba(255, 255, 255,0.3);*/
+}
+.lin{
+    border:6px solid #3e3436;
+    margin:20px;
+}
+.med{
+    position:relative;
+}
+.container {
+    width: 100%;
+}
+
+content {
+    margin: 0px;
+}
+
+    /* Wrapping element */
+    /* Set some basic padding to keep content from hitting the edges */
+    .body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+span {
+    font-family: KaushanScript-Regular;
+    font: 2000;
+}
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* Hide/rearrange for smaller screens */
+@media (max-width: 768px) {
+    /* Hide captions */
+ 
+    .carousel-caption {
+
+        display: none;
+    }
+}
+
+
+.menu-wrap {
+    /*width: 100%;*/
+    /*box-shadow: 0px 15px 3px rgba(0,0,0,0.1);*/
+    /*background: #eee;*/
+   
+}
+
+.menu:after {
+    display: block;
+    clear: both;
+   
+}
+
+.see {
+    color: white;
+    z-index: 10005;
+}
+
+.menu {
+    /*display:block;*/
+    margin: 0px auto 0px auto;
+    list-style-type: none;
+    
+  
+}
+
+    .menu a {
+        margin: 0;
+        padding: 8px 10px;
+        color: white;
+        text-decoration: none;
+        
+    }
+
+
+a:hover {
+    text-decoration: none;
+}
+
+.menu li {
+    position: relative;
+    float: left;
+    /*display: block;*/
+    margin: 0;
+  
+}
+
+    .menu li:first-child {
+        border-left: none;
+    }
+
+    .menu li:hover > a,
+    .menu li:focus > a {
+        text-decoration: none;
+        color: #3e3436;
+        /*background-color: rgba(62, 52, 54, 0);*/
+    }
+
+    .menu li:hover:before,
+    .menu li:focus:before {
+        margin-top: 0;
+        border-top-color: #333;
+    }
+
+    .menu li:hover .children,
+    .menu li:focus .children {
+        opacity: 1;
+        -webkit-transform: rotateX(0) translateZ(0);
+        transform: rotateX(0) translateZ(0);
+    }
+
+.menu .children {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-width: 300px; /* Chrome, Safari, Opera */
+    -moz-column-width: 300px; /* Firefox */
+    column-width: 300px;
+    -webkit-column-gap: 0px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 0px; /* Firefox */
+    column-gap: 0px;
+    background-color: rgba(62, 52, 54, 0.08);
+    column-fill: auto;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateX(-130deg);
+    transform: rotateX(-130deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: top center;
+    -ms-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.17, 0.67, 0.59, 1.21), opacity 0.2s 0.2s;
+    transition: transform 2s cubic-bezier(0.17, 0.67, 0.59, 1.21), opacity 0.2s 0.2s;
+    list-style-type: none;
+    position: Absolute;
+    top: 95%;
+    margin: 0;
+    padding: 10px 0;
+    color: #3e3436;
+    text-align: left;
+    position: absolute;
+    border-radius:10px 10px;
+
+}
+
+    .menu .children li {
+        width:300px;
+        left: 0px;
+       
+    }
+
+    .menu .children a {
+        width: 300px;
+        outline: 0;
+    }
+
+        .menu .children a:hover,
+        .menu .children a:focus {
+            left: 0;
+            color: #333;
+            background-color: rgba(62, 52, 54, 0.15);
+            width: 300px;
+        }
+@media screen and (max-width: 768px) {
+
+
+
+
+
+    .menu li {
+        float: none;
+        display:block;
+        position:relative;
+    }
+    .menu .children {
+        -webkit-column-count: 1; /* Chrome, Safari, Opera */
+        -moz-column-count: 1; /* Firefox */
+        column-count: 1;
+        -webkit-column-width: 100px; /* Chrome, Safari, Opera */
+        -moz-column-width: 100px; /* Firefox */
+        column-width: 100px;
+    }
+        .menu .children li {
+            width: 300px;
+            left: 150px;
+        }
+    }
+
+
+
+.Ay {
+    font-size: 90%;
+}
+
+.broken {
+    float: left;
+    width: 33%;
+    position: relative;
+}
+
+div.made {
+    clear: both;
+}
+
+    div.made span p {
+        white-space: nowrap;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        /* This is the dangerous one in WebKit, as it breaks things wherever */
+        word-break: break-all;
+        /* Instead use this non-standard one: */
+        word-break: break-word;
+        column-fill: balance;
+        /* Adds a hyphen where the word breaks, if supported (No Blink) */
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+
+    div.made img {
+        float: left;
+        width: 300px;
+        height: 200px;
+        margin: 20px;
+        border: 6px solid #000901;
+    }
+
+.Events {
+    
+    padding-left: 0px;
+}
+
+.navbar-brand {
+    padding: 0px 15px 0px 15px;
+    margin: 0;
+}
+
+.p {
+    background: inherit;
+    width: 45px;
+    height: 45px;
+    border-radius: 47px;
+    box-shadow: 0 0 0 2px rgba(144, 147, 148, 0.09), 0 0 0 2px rgba(208, 212, 216, 0.3);
+    margin: 5px;
+    position: relative;
+    text-align: center;
+    font-family: Arial;
+    font-size: 23px;
+    padding: 1px;
+}
+
+    .p > p {
+        font-size: small;
+        margin: 15px 0 0 0;
+    }
+
+#soon {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #337ab7;
+    font-size: medium;
+}
+.soon{
+    padding-left:0;
+}
+
+.boxed {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    background: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, rgba(0, 0, 0, 0.3) 1px, rgba(0, 0, 0, 0.3) 0px );
+}
+
+.mejs-list li:hover {
+    background: #ffa;
+    cursor: pointer;
+}
+
+.mejs-list li.current {
+    background: #cddfff;
+}
+
+.mejs-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sermon-links {
+
+
+
+    -webkit-animation: swing-bottom-left-fwd .4s cubic-bezier(.25,.46,.45,.94) both;
+    animation: swing-bottom-left-fwd .4s cubic-bezier(.25,.46,.45,.94) both
+
+    vertical-align: middle;
+    min-height: 20px;
+    padding: 0px;
+    background-color: #337ab7;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+    @media (min-width: 768px) {
+        /*.sermon-links {
+            vertical-align: middle;
+            min-height: 20px;
+            padding: 0px;
+            
+            background-color: #337ab7;
+            
+           
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+        }}
+        .wel ul {
+            display: block;
+            background-color: #337ab7;
+            clear: both;
+        }*/
+    }
+
+    
+
+
+   ul li .link{
+        float:left;
+    }
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+    
+}
+
+.column {
+    float: left;
+    width: 25%;
+   
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+    font-family: arial;
+    background-color: #555;
+   
+}
+
+.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out 0.6s;
+    -moz-transition: opacity 1s ease-in-out 0.6s;
+    -o-transition: opacity 1s ease-in-out 0.6s;
+    transition: opacity 1s ease-in-out 0.6s;
+}
+
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+
+    .carousel-fade .carousel-inner .active.left,
+    .carousel-fade .carousel-inner .active.right {
+        left: 0;
+        opacity: 0;
+        z-index: 1;
+    }
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+.fade-carousel {
+    position: relative;
+    height: inherit;
+}
+
+    .fade-carousel .carousel-inner .item {
+        height: inherit;
+    }
+
+    .fade-carousel .carousel-indicators > li {
+        margin: 0 2px;
+        background-color: #f39c12;
+        border-color: #f39c12;
+        opacity: .7;
+    }
+
+        .fade-carousel .carousel-indicators > li.active {
+            width: 10px;
+            height: 10px;
+            opacity: 1;
+        }
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+    -webkit-transform: translate3d(-50%,-50%,0);
+    -moz-transform: translate3d(-50%,-50%,0);
+    -ms-transform: translate3d(-50%,-50%,0);
+    -o-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+
+    .hero h1 {
+        font-size: 6em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+    -moz-transition: 2s all ease-in-out .1s;
+    -ms-transition: 2s all ease-in-out .1s;
+    -o-transition: 2s all ease-in-out .1s;
+    transition: 2s all ease-in-out .1s;
+}
+
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+    -moz-transition: 2s all ease-in-out .1s;
+    -ms-transition: 2s all ease-in-out .1s;
+    -o-transition: 2s all ease-in-out .1s;
+    transition: 2s all ease-in-out .1s;
+}
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay:hover {
+    display:block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .7;
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {
+    padding: 10px 40px;
+}
+
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    margin: 20px auto;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1,
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+   max-height:162px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.fade-carousel .slides .slide-1 {
+    
+    background-image: url('../images/summer-192179_1280.jpg');
+}
+
+.fade-carousel .slides .slide-2 {
+    background-image: url('../images/dsc_0966.jpg');
+}
+
+.fade-carousel .slides .slide-3 {
+    background-image: url('../images/dsc_0878.jpg');
+}
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px) {
+    .hero {
+        width: 980px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .hero h1 {
+        font-size: 4em;
+    }
+}
+footer{
+    position:relative;
+    width:100%;
+}
+.tracking-in-contract-bck-top {
+    -webkit-animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}

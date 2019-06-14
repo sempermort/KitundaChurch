@@ -3,8 +3,10 @@
     "",
     "\\KitundaChurch",
     "\\KitundaChurch\\Views",
-    "\\KitundaChurch\\Views\\Albums"
+    "\\KitundaChurch\\Views\\Albums",
+    "\\KitundaChurch\\Views\\Albums\\Components",
+    "\\KitundaChurch\\Views\\Home"
   ],
-  "SelectedNode": "\\KitundaChurch\\Views\\Albums\\Index.cshtml",
+  "SelectedNode": "\\KitundaChurch\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

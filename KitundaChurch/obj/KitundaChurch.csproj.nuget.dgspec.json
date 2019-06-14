@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\repos\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj": {}
+  },
+  "projects": {
+    "D:\\repos\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj",
+        "projectName": "KitundaChurch",
+        "projectPath": "D:\\repos\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj",
+        "packagesPath": "C:\\Users\\Jackson\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\KitundaChurch\\KitundaChurch\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jackson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.0": {
+          "dependencies": {
+            "Bootstrap.Less": {
+              "target": "Package",
+              "version": "[3.3.7, )"
+            },
+            "Bootstrap.v3.Datetimepicker": {
+              "target": "Package",
+              "version": "[4.17.45, )"
+            },
+            "Microsoft.AspNetCore.All": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.1.0-preview1-final, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.0.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "MoreLinq.Source.MoreEnumerable.MinBy": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "Rotativa.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "morelinq": {
+              "target": "Package",
+              "version": "[3.0.0-beta-1, )"
+            },
+            "summernote.editor": {
+              "target": "Package",
+              "version": "[0.8.10, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

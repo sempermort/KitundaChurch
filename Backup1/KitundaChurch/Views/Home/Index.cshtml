@@ -1,0 +1,273 @@
+﻿@addTagHelper*, KitundaChurch
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+   
+</style>
+<div class="dcontainer" style="position:relative;">
+
+
+    <div class="ism-slider" data-transition_type="fade" data-play_type="loop" data-image_fx="zoompan" id="my-slider">
+        <ol>
+            <li>
+                <img src="~/images/IMG_20170121_125913.jpg" style="width:100%;" />
+                <div class="ism-caption ism-caption-0">My slide caption text</div>
+            </li>
+            <li>
+                <img src="images/beautiful-701678_1280.jpg" style="width:100%; ">
+                <div class="ism-caption ism-caption-0">My slide caption text</div>
+            </li>
+            <li>
+                <img src="images/summer-192179_1280.jpg" style="width:100%; ">
+                <div class="ism-caption ism-caption-0">My slide caption text</div>
+            </li>
+            <li>
+                <img src="~/images/DSC_0871.JPG" style="width:100%; height:100%;" />
+
+                <div class="tracking-in-contract-bck-top ">Mungu ni Pendo Apenda Watu</div>
+            </li>
+            <li>
+                <img src="~/images/DSC_0874.JPG" style="width:100%; " />
+
+                <div class="ism-caption ism-caption-0">My slide caption text</div>
+            </li>
+            <li>
+                <img src="~/images/DSC_0873.JPG" style="width:100%; " />
+
+
+                <div class="ism-caption ism-caption-0">My slide caption text</div>
+            </li>
+            <li>
+                <img src="~/images/DSC_0817.JPG" style="width:100%;" />
+
+                <div class="ism-caption ism-caption-0">My slide caption text</div>
+            </li>
+            <li>
+                <img src="~/images/DSC_0966.JPG" style="width:100%; " />
+                <div class="ism-caption ism-caption-0">My slide caption text</div>
+            </li>
+            <li>
+                <img src="~/images/DSC_0878.JPG" style="width:100%; " />
+                <div class="ism-caption ism-caption-0">My slide caption text</div>
+            </li>
+            <li>
+                <img src="~/images/DSC_0938.JPG" style="width:100%;  " />
+                <div class="ism-caption ism-caption-0">My slide caption text</div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="eve" style="margin-top:15px; ">
+        <div class="Events col-md-6" style="position:relative" ;>
+            <vc:event />
+        </div>
+
+        <div class="media-left col-md-6" style="position:relative; padding-right:0;">
+
+            <vc:play-list new NavigationComponentModel()></vc:play-list>
+        </div>
+    </div>
+
+    <div class="col-md-12 b " style="margin-top:15px; margin-left:0; padding:0;">
+        <div class="midcenter col-md-8" style="padding:0;">
+            <div class="container-fluid">
+                <a href="@Url.Action("Create","News")">+</a>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="col-md-3 navbar-brand"><h3>News, Blog & Ministries</h3></span>
+                            <div class="col-md-9">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                        </button>
+
+                    </div>
+                    <div class="col-md-8 collapse btn-default navbar-collapse" id="myNavbar">
+
+                        <ul class=" nav  navbar-nav " id="res">
+                            <li class="active btn lin" onclick="clickFunc(1)" id="1"><h4>NEWS</h4></li>
+                            <li class="lin btn" onclick="clickFunc(2)" id="2"><h4>BLOGS</h4></li>
+                            <li class="lin btn" onclick="clickFunc(3)" id="3"><h4>MINISTRIES</h4></li>
+                        </ul>
+                    </div>
+</div>
+            <div class="Events  a " style="position:relative;">
+                <vc:news cat-id="0"></vc:news>
+            </div>
+        </div>
+        <div class="col-md-4  our" style="padding:0;">
+            <h3>Our Pastor</h3>
+            <hr style="width:100px;" />
+            <div class="card">
+                <img src="~/images/IMG_20161206_093754.jpg" style="width:50%;  border-radius: 50%;" />
+                <h1>John Doe</h1>
+                <p class="title">CEO & Founder, Example</p>
+                <p>Harvard University</p>
+                <hr style="width:20px; " />
+            </div>
+        </div>
+    </div>
+    <div class="row col-md-12">
+
+        <div class="overlay" style="display:none;"> <span>Our gallery</span></div>
+        <div class="column">
+
+            <div id="myCarousel" class="carousel slide" data-interval="4000" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="~/images/DSC_0817.JPG" alt="Mountains" style="width:100%" />
+                    </div>
+
+                    <div class="item">
+                        <img src="~/images/DSC_0938.JPG" alt="Mountains" style="width:100%" />
+                    </div>
+
+                    <div class="item">
+                        <img src="~/images/IMG_20170121_125913.jpg" style="width:100%" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel fade-carousel column carousel-fade slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+            <!-- Overlay -->
+            
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#bs-carousel" data-slide-to="1"></li>
+                <li data-target="#bs-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item slides active">
+                    <div class="slide-1"></div>
+
+                </div>
+                <div class="item slides">
+                    <div class="slide-2"></div>
+
+                </div>
+                <div class="item slides">
+                    <div class="slide-3"></div>
+
+                </div>
+            </div>
+        </div>
+
+            <div class="column">
+
+
+                <div id="myCarousel" class="carousel slide" data-interval="4000" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="~/images/DSC_0871.JPG" alt="Mountains" style="width:100%" />
+                        </div>
+
+                        <div class="item">
+                            <img src="~/images/DSC_0966.JPG" alt="Mountains" style="width:100%" />
+                        </div>
+
+                        <div class="item">
+                            <img src="~/images/DSC_0878.jpg" style="width:100%" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel fade-carousel column carousel-fade slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+                <!-- Overlay -->
+                
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#bs-carousel" data-slide-to="1"></li>
+                    <li data-target="#bs-carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item slides active">
+                        <div class="slide-1"></div>
+
+                    </div>
+                    <div class="item slides">
+                        <div class="slide-2"></div>
+
+                    </div>
+                    <div class="item slides">
+                        <div class="slide-3"></div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+
+
+
+        @section scripts
+            {
+            <script>
+
+
+
+        var container = $(".a");
+
+        function clickFunc(Id) {
+
+
+            $.ajax({
+                url: "@Url.Action("Intermediate","Home")",
+                type: "Post",
+                data: "id=" +Id,
+
+                success: function (data) { container.html(data); }
+            });
+
+        };
+
+
+
+        $(".Albm").click(function () {
+
+
+            $(".hid").hide();
+
+            $(this).find(".table3").show();
+
+
+        });
+
+        $(".son").click(function () {
+            $("#table2").show();
+            $(".hid").hide();
+            $(".table3").hide();
+
+        });
+        $(".alb").click(function () {
+            $("#table2").hide();
+            $(".table3").hide();
+            $(".hid").show();
+        });
+        $('#carouselHacked').carousel();
+
+            </script>
+        }

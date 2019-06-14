@@ -1,0 +1,191 @@
+﻿
+@{
+    ViewData["Title"] = "Report";
+}
+<div class="text-center">
+<h2>KANISA LA WAADVENTISTA WA SABATO</h2>
+<h3>KANDA YA MASHARIKI MWA TANZANIA</H3>
+<h4>TAARIFA YA FEDHA MWEZI...............</h4>
+    </div>
+@*<div><a class="col-md-offset-10 btn btn-success" href="@Url.Action("PrintViewToPdf","Matoleos")">Export To PDF</a>
+    
+    </div>*@
+@*<form asp-controller="Matoleos" asp-action="Report" method="post">
+  
+   <div class="">
+    <div class="form-group col-md-6">
+        <label  class="control-label">From</label>
+        <input name="Savetime1" id="savetime1" class="form-control datepicker" />
+       
+    </div>
+    <div class="form-group col-md-6">
+        <label  class="control-label">To</label>
+        <input name="Savetime1" id="savetime1" class="form-control datepicker" />
+       
+    </div></div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-default" />*@
+    @*</div>
+    </form>*@
+<table style="margin:20px;" border="1">
+<thead>
+    A: MATOLEO YA KANISA MAHALIA YALIYOPELEKWA KONFERENSI
+</thead>
+    <tbody>
+
+<tr>
+    <th>Tarehe</th>
+@foreach (var a in ViewBag.tar)
+{
+    <th>@a</th>
+}
+  <th>Jumla</th>
+</tr>
+    <tr>
+        <td>Zaka</td>
+      @foreach (var a in ViewBag.SumZaka)
+      {
+        <td class="@a">@a</td>
+      }
+        <td>@ViewBag.SumZakaf</td>
+    </tr>
+    <tr>
+        <td>Sadaka Konferensi 58%</td>
+        @foreach (var a in ViewBag.SumConf)
+        {
+            <td class="@a">@a</td>
+        }
+        <td>@ViewBag.Conff</td>
+    </tr>
+    <tr>
+        <td>Sadaka Makambi</td>
+        @foreach (var a in ViewBag.SumMbi)
+        {
+          
+            <td class="@a">@a</td>
+
+        }
+        <td>@ViewBag.SumMbif</td>
+       
+    <tr>
+        <td>Jumla A</td>
+        @foreach (var a in ViewBag.A)
+        {
+
+        <td>@a</td>
+        }
+        <td>@(ViewBag.SumZakaf+ViewBag.Conff+ViewBag.SumMbif)</td>
+    </tr>
+        </tbody>
+
+</table>
+
+<table style="margin:20px;" border="1">
+    <thead>
+        B: MATOLEO YALIYOBAKI KANISANI
+    </thead>
+    <tbody>
+        <tr>
+            <th>Tarehe</th>
+            @foreach (var a in ViewBag.tar)
+            {
+                <th>@a</th>
+            }
+            <th>Jumla</th>
+        </tr>
+        <tr>
+            <td>Sadaka ya pamoja 42%</td>
+            @foreach (var a in ViewBag.SumBk)
+            {
+                <td class="@a">@a</td>
+            }
+            <td>@ViewBag.SumBkf</td>
+        </tr>
+        <tr>
+            <td>Sadaka Ujenzi Makambi</td>
+            @foreach (var a in ViewBag.SumNgo)
+            {
+                <td class="@a">@a</td>
+            }
+            <td>@ViewBag.SumNgof</td>
+        </tr>
+
+        <tr>
+            <td>Jumla B</td>
+              @foreach (var a in ViewBag.B)
+              {
+
+                <td>@a</td>
+              }
+               <td>@(ViewBag.SumBkf+ ViewBag.SumNgof)</td>
+            </tr>
+        <tr>
+            <th>Jumla A+B</th>
+            @foreach (var a in ViewBag.SumTotal)
+            {
+                <th>@a</th>
+            }
+            <th>@ViewBag.SumTotalf</th>
+        </tr>
+    </tbody>
+
+</table >
+<table style="margin:20px;" border="1">
+    <thead>
+        C: FEDHA ZILIZOPELEKWA BENKI
+    </thead>
+    <tbody>
+        
+
+        <tr>
+            <td>Tarehe</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+
+        <tr>
+            <td>KONFERENCE</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>KANISA MAHALIA</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+       <tr>
+            <td>Jumla </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+
+</table>
+@section scripts {
+    <script>
+        $(document).ready(function ()
+        {
+
+
+
+        });
+
+
+    </script>
+
+
+
+}

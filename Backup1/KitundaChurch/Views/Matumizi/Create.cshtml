@@ -1,0 +1,67 @@
+﻿@model KitundaChurch.Models.Matumizi
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Matumizi</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateAsync">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group ">
+                <label class="control-label"> Department</label>
+                <select asp-for="department.Name" asp-items="ViewBag.Depart" class="form-control"></select>
+               </div>
+           
+            <div class="form-group">
+                <label asp-for="Receiver" class="control-label"></label>
+                <input asp-for="Receiver" class="form-control" />
+                <span asp-validation-for="Receiver" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Usedfor" class="control-label"></label>
+                <input asp-for="Usedfor" class="form-control" />
+                <span asp-validation-for="Usedfor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FormNo" class="control-label"></label>
+                <input asp-for="FormNo" class="form-control" />
+                <span asp-validation-for="FormNo" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="IndexAsync">Back to List</a>
+</div>
+
+@section scripts {
+        <script>
+
+            $(document).ready(function () {
+
+                $(".new").click(function () {
+
+
+                    $(".dname").show();
+
+                });
+
+            });
+    </script>
+    }

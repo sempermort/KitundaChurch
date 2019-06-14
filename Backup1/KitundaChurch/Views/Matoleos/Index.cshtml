@@ -1,0 +1,145 @@
+﻿@model IEnumerable<KitundaChurch.Models.Matoleo>
+@addTagHelper *, KitundaChurch
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Records</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="container-fluid">
+    
+<vc:timed/>
+    </div>
+<hr>
+
+<div class="well" >
+    <p> sadaka Bk:@ViewBag.sum1</p>
+    <p>sadaka conf:@ViewBag.sum2</p>
+    <p>sadaka Zaka:@ViewBag.sum3</p>
+    <p>sadaka ya Kambi : @ViewBag.sum6</p>
+    <p>sadaka Ujenzi    :@ViewBag.sum7</p>
+    <p>sadaka Mpango Wa kanisa:@ViewBag.sum5</p>
+    <p style="">sadaka Total:@ViewBag.sum4</p>
+</div>
+<table class="table glyphicon-resize-full" >
+    <thead>
+        <tr><th>S/No</th>
+            <th>
+            @Html.DisplayNameFor(model => model.ChurchMembers.Name)
+            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Zaka)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.sadakaConf)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sadakaBk)
+            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.sadakaMajengo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.sadakaMakambi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MpangoKanisa)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Savetime)
+
+            </th>
+        @foreach (var g in Model)
+        {
+
+             @foreach (var s in g.mengineyo)
+             {
+            <th>
+
+                @s.descr
+            @{break;
+            }
+            </th>} 
+                    /* break;*/
+                }
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+
+            </th>
+</tr>
+    </thead>
+    <tbody>
+        @{int a = 0; }
+@foreach (var item in Model)
+         {
+        <tr>
+            <td id="sno">
+              @{ViewBag.v=++a;
+             }
+             @ViewBag.v
+         </td>
+
+         <td>
+             @Html.DisplayFor(modelItem => item.ChurchMembers.Name)
+
+         </td>
+
+         <td>
+             @Html.DisplayFor(modelItem => item.Zaka)
+         </td>
+
+         <td>
+             @Html.DisplayFor(modelItem => item.sadakaConf)
+         </td>
+
+         <th>
+             @Html.DisplayFor(model => item.sadakaBk)
+         </th>
+
+         <td>
+             @Html.DisplayFor(modelItem => item.sadakaMajengo)
+         </td>
+
+         <td>
+             @Html.DisplayFor(modelItem => item.sadakaMakambi)
+         </td>
+
+         <td>
+             @Html.DisplayFor(modelItem => item.MpangoKanisa)
+         </td>
+
+         <td>
+             @Html.DisplayFor(modelItem => item.Savetime)
+         </td>0
+         @foreach (var s in item.mengineyo)
+            {
+                <td>
+            @if (!s.Equals(null))
+            {
+                    @s.Amount
+                break;
+            }
+           
+                </td>}
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+
+
+            <td>
+
+
+                <a asp-action="SummaryAsync" asp-route-Savetime="@item.Savetime">Go To Summary</a>
+                <a asp-action="EditAsync" asp-route-id="@item.MatoleoId">Edit</a> |
+                <a asp-action="DetailsAsync" asp-route-id="@item.MatoleoId">Details</a> |
+                <a asp-action="DeleteAsync" asp-route-id="@item.MatoleoId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
