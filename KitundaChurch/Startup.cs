@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using KitundaChurch.Models;
+using KitundaChurch.services;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using KitundaChurch.Models;
+using Microsoft.Extensions.Hosting;
 using System;
-using ReflectionIT.Mvc.Paging;
-using Rotativa.AspNetCore;
-using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace KitundaChurch
 {
@@ -23,52 +26,117 @@ namespace KitundaChurch
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-
-            services.AddPaging();
-            services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
-            services.AddDistributedMemoryCache();
-            services.AddSession(options =>
+            services.Configure<CookiePolicyOptions>(options =>
             {
-                // Set a short timeout for easy testing.
-                options.IdleTimeout = TimeSpan.FromSeconds(30);
-                options.Cookie.HttpOnly = true;
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            services.AddDbContext<KitundaChurchContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("KitundaChurchContext")));
+
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
+           
+      
+            services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
+
+            //Add serverSide Blazor
+            services.AddServerSideBlazor();
+
+
+            services.AddDbContext<KitundaChurchContext>(options => options.UseSqlServer(Configuration.
+                GetConnectionString("KitundaChurchContext")));
+
+        
+            services.Configure<IdentityOptions>(opts =>
+                {
+
+                    // Default Lockout settings.
+                    opts.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                    opts.Lockout.MaxFailedAccessAttempts = 5;
+                    opts.Lockout.AllowedForNewUsers = true;
+                    //SignIn Requirements
+                    opts.SignIn.RequireConfirmedEmail = true;
+                    opts.SignIn.RequireConfirmedPhoneNumber = false;
+                    //Password settings                    
+                    opts.Password.RequiredLength = 6;
+                    opts.Password.RequireNonAlphanumeric = false;
+                    opts.Password.RequireLowercase = false;
+                    opts.Password.RequireUppercase = false;
+                    opts.Password.RequireDigit = false;
+
+                    // User settings.
+                    opts.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                    opts.User.RequireUniqueEmail = true;
+                });
+
+            services.AddIdentity<AppUser, IdentityRole>()
+                    .AddEntityFrameworkStores<KitundaChurchContext>()
+                    .AddDefaultTokenProviders();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                // Cookie settings
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+
+                options.LoginPath = "/Identity/Account/Login";
+                options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+                options.SlidingExpiration = true;
+            });
+            services.AddTransient<IEmailSender, EmailSender>(i =>
+                new EmailSender(
+                    Configuration["EmailSender:Host"],
+                    Configuration.GetValue<int>("EmailSender:Port"),
+                    Configuration.GetValue<bool>("EmailSender:EnableSSL"),
+                    Configuration["EmailSender:UserName"],
+                    Configuration["EmailSender:Password"]
+                )
+            );
+
+            services.Configure<AuthMessageSenderOptions>(Configuration);
+        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseBrowserLink();
+                //app.UseDatabaseErrorPage();
             }
+         
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
             }
-            app.UseSession();
-            app.UseStatusCodePages();
-            app.UseDeveloperExceptionPage();
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseHttpsRedirection();
+            app.UseCookiePolicy();
+            //app.UseSession();
+            //app.UseStatusCodePages();
+            //app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
            
 
-            app.UseMvc(routes =>
+            app.UseEndpoints(endpoints =>
             {
-                
-                routes.MapRoute(
+                endpoints.MapControllerRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
-            //RotativaConfiguration.Setup(env);
+      
+
+            //KitundaChurchContext.CreateAdminAccount(app.ApplicationServices,Configuration).Wait();
         }
         public void ConfigureRazor(RazorViewEngineOptions razor)
         {
             razor.ViewLocationExpanders.Add(new ViewLocationExpander());
+
         }
     }
 }

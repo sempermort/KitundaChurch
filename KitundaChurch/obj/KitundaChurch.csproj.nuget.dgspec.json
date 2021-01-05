@@ -1,36 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj": {}
+    "C:\\Users\\semperjack\\Documents\\Visual Studio 2019\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj": {}
   },
   "projects": {
-    "D:\\repos\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj": {
+    "C:\\Users\\semperjack\\Documents\\Visual Studio 2019\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj",
+        "projectUniqueName": "C:\\Users\\semperjack\\Documents\\Visual Studio 2019\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj",
         "projectName": "KitundaChurch",
-        "projectPath": "D:\\repos\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj",
-        "packagesPath": "C:\\Users\\Jackson\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\KitundaChurch\\KitundaChurch\\obj\\",
+        "projectPath": "C:\\Users\\semperjack\\Documents\\Visual Studio 2019\\KitundaChurch\\KitundaChurch\\KitundaChurch.csproj",
+        "packagesPath": "C:\\Users\\semperjack\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\semperjack\\Documents\\Visual Studio 2019\\KitundaChurch\\KitundaChurch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jackson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\semperjack\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.0": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -41,44 +42,50 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.0": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Bootstrap.Less": {
               "target": "Package",
-              "version": "[3.3.7, )"
+              "version": "[3.4.1, )"
             },
             "Bootstrap.v3.Datetimepicker": {
               "target": "Package",
               "version": "[4.17.45, )"
             },
-            "Microsoft.AspNetCore.All": {
+            "Microsoft.ApplicationInsights": {
               "target": "Package",
-              "version": "[2.0.0, )"
+              "version": "[2.16.0, )"
             },
-            "Microsoft.AspNetCore.Session": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.1.0-preview1-final, )"
+              "version": "[3.1.10, )"
             },
-            "Microsoft.NETCore.App": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.0.0, )",
-              "autoReferenced": true
+              "version": "[3.1.10, )"
             },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[2.0.0, )"
+              "version": "[3.1.10, )"
             },
-            "MoreLinq.Source.MoreEnumerable.MinBy": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[1.0.2, )"
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.10, )"
             },
             "ReflectionIT.Mvc.Paging": {
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.2.0, )"
             },
             "Rotativa.AspNetCore": {
               "target": "Package",
-              "version": "[1.0.6, )"
+              "version": "[1.1.1, )"
             },
             "bootstrap": {
               "target": "Package",
@@ -94,10 +101,24 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
